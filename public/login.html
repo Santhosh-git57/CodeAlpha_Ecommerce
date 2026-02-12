@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yash Cart | Role Login</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="role-login-page">
+    <main class="role-login-wrap">
+      <section class="role-hero">
+        <h1>Yash Cart</h1>
+        <p>Select your portal to continue. This is your project-specific login gateway.</p>
+      </section>
+
+      <section class="role-grid" id="roleSwitch">
+        <article class="role-select-card" data-role="admin">
+          <div class="role-icon-circle" aria-hidden="true">⚙️</div>
+          <h2>Admin</h2>
+          <p>Manage products, users, and order flow.</p>
+        </article>
+        <article class="role-select-card" data-role="customer">
+          <div class="role-icon-circle" aria-hidden="true">🛒</div>
+          <h2>Customer</h2>
+          <p>Browse catalog, add to cart, and checkout.</p>
+        </article>
+      </section>
+      <p class="role-prompt" id="rolePrompt">Select Admin or Customer to open login form.</p>
+
+      <article class="card auth-wrap role-auth-wrap is-hidden" id="authPanel">
+        <h3 class="role-login-title" id="roleNote">Login</h3>
+        <form class="form-grid" id="loginForm">
+          <label for="email">Email</label>
+          <input class="input" id="email" type="email" required />
+          <label for="password">Password</label>
+          <input class="input" id="password" type="password" required />
+          <button class="btn btn-primary auth-submit" type="submit">Login</button>
+          <p class="notice" id="loginNotice"></p>
+        </form>
+        <p class="auth-switch">New user? <a href="/register.html">Create account</a></p>
+      </article>
+    </main>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/login.js"></script>
+  </body>
+</html>

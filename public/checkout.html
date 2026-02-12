@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yash Cart | Checkout</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">Yash Cart</div>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/cart.html">My Cart</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-ghost" id="authLink" href="/login.html">Login</a>
+          <button class="btn btn-primary" id="logoutBtn" style="display:none">Logout</button>
+          <a class="btn btn-ghost" href="/cart.html">My Cart <span id="cartCount">0</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page container">
+      <article class="card checkout-wrap">
+        <h2>Checkout</h2>
+        <p style="color:#6d6288">Place your order with shipping details.</p>
+        <form class="form-grid" id="checkoutForm">
+          <label for="address">Shipping Address</label>
+          <textarea id="address" rows="4" placeholder="Enter complete shipping address" required></textarea>
+          <button class="btn btn-primary" type="submit">Place Order</button>
+          <p class="notice" id="checkoutNotice"></p>
+        </form>
+      </article>
+
+      <article class="card checkout-wrap" style="margin-top:1rem">
+        <h3>Your Orders</h3>
+        <div class="list" id="ordersList"></div>
+      </article>
+    </main>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/checkout.js"></script>
+  </body>
+</html>
+
