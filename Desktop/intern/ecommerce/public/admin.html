@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yash Cart | Admin</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">Yash Cart Admin</div>
+        <nav class="nav-links">
+          <a href="/admin.html">Dashboard</a>
+          <a href="/">Store View</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-ghost" id="authLink" href="/login.html">Login</a>
+          <button class="btn btn-primary" id="logoutBtn" style="display:none">Logout</button>
+          <a class="btn btn-ghost" href="/cart.html">My Cart <span id="cartCount">0</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page container">
+      <section class="admin-grid">
+        <article class="card admin-card">
+          <h2>Customers</h2>
+          <div id="usersList" class="admin-list"></div>
+        </article>
+
+        <article class="card admin-card">
+          <h2>Open Carts</h2>
+          <div id="cartsList" class="admin-list"></div>
+        </article>
+      </section>
+
+      <section class="admin-grid">
+        <article class="card admin-card">
+          <h2>Orders</h2>
+          <div id="ordersList" class="admin-list"></div>
+        </article>
+
+        <article class="card admin-card">
+          <h2>Product Management</h2>
+          <form id="productForm" class="form-grid admin-form">
+            <input class="input" id="productName" placeholder="Product name" required />
+            <input class="input" id="productCategory" placeholder="Category" required />
+            <input class="input" id="productPrice" type="number" min="0" placeholder="Price" required />
+            <input class="input" id="productStock" type="number" min="0" placeholder="Stock" required />
+            <input class="input" id="productImage" placeholder="Image URL" required />
+            <textarea id="productDescription" rows="3" placeholder="Description" required></textarea>
+            <button class="btn btn-primary" type="submit">Add Product</button>
+            <p class="notice" id="productNotice"></p>
+          </form>
+          <div id="productsList" class="admin-list"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/admin.js"></script>
+  </body>
+  </html>

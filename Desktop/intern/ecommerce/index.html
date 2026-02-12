@@ -1,0 +1,108 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yash Cart | Friendly Shopping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">Yash Cart</div>
+      <nav class="main-nav hidden" id="mainNav">
+        <a href="#products">Shop</a>
+        <a href="#collections">Collections</a>
+      </nav>
+      <div class="header-actions">
+        <button class="logout-button hidden" id="logoutButton" type="button">Logout</button>
+        <button class="cart-button hidden" id="cartButton" aria-label="Cart">
+          Cart <span id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="login-gate" id="loginGate">
+        <p class="badge badge-login">Welcome to Yash Cart</p>
+        <h1>Login to continue shopping</h1>
+        <p class="login-sub">Choose role and sign in. Clean flow, no confusion.</p>
+
+        <div class="role-pills" id="rolePills">
+          <button class="role-pill active" data-role="customer" type="button">Customer</button>
+          <button class="role-pill" data-role="admin" type="button">Admin</button>
+        </div>
+
+        <form class="login-form" id="loginForm">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" type="email" placeholder="Enter email" required />
+
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password" placeholder="Enter password" required />
+
+          <button class="btn btn-primary login-submit" type="submit">Login</button>
+          <p class="login-message" id="loginMessage"></p>
+        </form>
+
+        <p class="demo-note">Demo: Customer `user@yashcart.com / user123` | Admin `admin@yashcart.com / admin123`</p>
+      </section>
+
+      <section id="storeApp" class="hidden">
+        <section class="hero" id="about">
+          <div class="hero-copy">
+            <p class="badge">Yash Picks of the Week</p>
+            <h1>Hello! Find something you will actually love to wear.</h1>
+            <p>
+              No complicated flow. Just clean products, quick search, and easy add-to-cart for your daily shopping.
+            </p>
+            <div class="hero-actions">
+              <a href="#products" class="btn btn-primary">Start Shopping</a>
+              <a href="#collections" class="btn btn-ghost">See Categories</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <h2>Friendly Offer</h2>
+            <p>Up to 30% off on selected items this week.</p>
+            <small>Offer valid till February 20, 2026.</small>
+          </div>
+        </section>
+
+        <section class="collections" id="collections">
+          <h2>Browse by Category</h2>
+          <div class="chip-wrap" id="categoryChips"></div>
+        </section>
+
+        <section class="product-section" id="products">
+          <div class="section-top">
+            <h2>Trending Products</h2>
+            <input type="search" id="searchInput" placeholder="Search by name or style" />
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <section class="promo-band">
+          <p>Free shipping above Rs 1499 | Easy return in 7 days | COD available</p>
+        </section>
+      </section>
+    </main>
+
+    <div class="modal hidden" id="quickView" aria-hidden="true">
+      <div class="modal-card">
+        <button class="close-modal" id="closeModal" aria-label="Close">&times;</button>
+        <img id="modalImage" alt="Product" />
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <strong id="modalPrice"></strong>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p>© 2026 Yash Cart. Made simple and human.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yash Cart | Register</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="auth-page">
+    <main class="page container">
+      <article class="card auth-wrap">
+        <h2 class="auth-title">Create Account</h2>
+        <form class="form-grid" id="registerForm">
+          <label for="name">Name</label>
+          <input class="input" id="name" required />
+          <label for="email">Email</label>
+          <input class="input" id="email" type="email" required />
+          <label for="password">Password</label>
+          <input class="input" id="password" type="password" minlength="6" required />
+          <button class="btn btn-primary auth-submit" type="submit">Register</button>
+          <p class="notice" id="registerNotice"></p>
+        </form>
+        <p class="auth-switch">Already have account? <a href="/login.html">Login</a></p>
+      </article>
+    </main>
+    <script src="/js/common.js"></script>
+    <script src="/js/register.js"></script>
+  </body>
+</html>

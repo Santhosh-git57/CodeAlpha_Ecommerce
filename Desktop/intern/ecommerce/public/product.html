@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yash Cart | Product</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">Yash Cart</div>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/cart.html">My Cart</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-ghost" id="authLink" href="/login.html">Login</a>
+          <button class="btn btn-primary" id="logoutBtn" style="display:none">Logout</button>
+          <a class="btn btn-ghost" href="/cart.html">My Cart <span id="cartCount">0</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page container">
+      <article class="card detail-wrap" id="detailWrap"></article>
+    </main>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/product.js"></script>
+  </body>
+</html>
+
