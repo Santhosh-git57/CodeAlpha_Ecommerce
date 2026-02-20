@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile - HeartCircle</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/feed">HeartCircle</a>
+      <div class="nav-links">
+        <a class="nav-link" href="/feed">Feed</a>
+        <a class="nav-link active" href="/profile">Profile</a>
+        <button id="logoutBtn" class="secondary">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <p id="errorBox" class="error"></p>
+
+    <section id="profileCard" class="card"></section>
+
+    <section id="followActions" class="card" style="display:none;"></section>
+
+    <section class="card" id="profileFormSection">
+      <h2>Edit Profile</h2>
+      <form id="profileForm" enctype="multipart/form-data">
+        <label for="bio">Bio</label>
+        <textarea id="bio" name="bio" maxlength="200"></textarea>
+
+        <label for="profilePicture">Profile Picture</label>
+        <input id="profilePicture" name="profilePicture" type="file" accept="image/*" />
+
+        <div class="post-editor-actions">
+          <button type="submit">Save Profile</button>
+          <button type="button" id="deleteProfilePhotoBtn" class="danger">Delete Profile Photo</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Posts</h2>
+      <div id="profilePosts"></div>
+    </section>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/profile.js"></script>
+</body>
+</html>

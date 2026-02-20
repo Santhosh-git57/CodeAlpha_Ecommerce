@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feed - HeartCircle</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/feed">HeartCircle</a>
+      <div class="nav-links">
+        <a class="nav-link active" href="/feed">Feed</a>
+        <a id="meLink" class="nav-link" href="/profile">Profile</a>
+        <button id="logoutBtn" class="secondary">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h1>Create Post</h1>
+      <p id="errorBox" class="error"></p>
+      <form id="postForm" enctype="multipart/form-data">
+        <label for="content">Text</label>
+        <textarea id="content" name="content" required maxlength="1000"></textarea>
+
+        <label for="image">Image (optional)</label>
+        <input id="image" name="image" type="file" accept="image/*" />
+
+        <button type="submit">Post</button>
+      </form>
+    </section>
+
+    <section id="feedContainer"></section>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/feed.js"></script>
+</body>
+</html>
